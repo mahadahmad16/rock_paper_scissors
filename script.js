@@ -49,4 +49,14 @@ function playGame(playerChoice){
             resultDisplay.style.color = "white";
             break;
     }
+
+    if (playerScore === 10 || compScore === 10) {
+        let round = 0;
+        playerScore = 0;
+        playerScoreDisplay.textContent = playerScore;
+        compScore = 0;
+        compScoreDisplay.textContent = compScore;
+        round++;
+        resultDisplay.textContent = `ROUND ${round} OVER`;
+    }
 }
